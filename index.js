@@ -44,6 +44,7 @@ app.get('/games:id',(req,res) => {
 app.get('/games',(req,res) => {
     res.send(games)
 })
+//full details to show in my app
 app.get('/games/:id', (req,res) => {
     if (typeof games[req.params.id - 1] === 'undefined') {
      return res.status(404).send({error: "Game  not found"})
